@@ -48,5 +48,10 @@
 */
 
 string task02(int a, int b, int n) {
-	return "error";
+	if (a <= 0 && b <= 0 && n <= 0) {
+		return "error";
+	}
+	int cost = 0;
+	
+	return ;
 }

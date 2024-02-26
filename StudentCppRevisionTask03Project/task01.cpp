@@ -37,5 +37,21 @@
 */
 
 int task01(int number) {
-	return abs(number) < 10000 ? number ;
+	if (number < 0) {
+		number = -number;
+	}
+
+	if (number > 9999) {
+		return 0;
+	}
+
+	int sum = 0;
+
+
+	sum += number / 1000;
+	sum += number / 100 % 10;
+	sum += number / 10 % 10;
+	sum += number % 10;
+
+	return  sum;
 }
