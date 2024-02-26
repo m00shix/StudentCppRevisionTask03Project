@@ -48,10 +48,19 @@
 */
 
 string task02(int a, int b, int n) {
-	if (a <= 0 && b <= 0 && n <= 0) {
-		return "error";
+	if (a > 0 && n > 0 && b >= 0 || a >= 0 && b > 0 && n > 0)
+	{
+		a *= n;
+		b *= n;
+		if (b > 99)
+		{
+			a += b / 100;
+			b %= 100;
+		}
 	}
-	int cost = 0;
-	
-	return ;
+	else {
+		return  "error";
+	}
+
+	return to_string(a) + " " + to_string(b);
 }
